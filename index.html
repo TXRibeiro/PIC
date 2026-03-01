@@ -1,0 +1,444 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster-Ready Water Storage System for Cities</title>
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- AOS Animate On Scroll -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-logo">
+            <i class="fa-solid fa-droplet"></i>
+            <span>DRWSS</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#problem">Problem</a></li>
+            <li><a href="#solution">Solution</a></li>
+            <li><a href="#departments">Departments</a></li>
+            <li><a href="#phases">Phases</a></li>
+            <li><a href="#roadmap">Roadmap</a></li>
+        </ul>
+        <button class="nav-menu-btn" id="menuBtn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <p class="hero-label">Integrative Course Project</p>
+            <h1 class="hero-title">
+                <span class="typewriter" id="typewriter"></span>
+            </h1>
+            <p class="hero-subtitle">
+                An intelligent and resilient water storage system for cities in disaster situations.
+            </p>
+            <a href="#about" class="btn-primary">
+                Explore Project <i class="fa-solid fa-arrow-down"></i>
+            </a>
+        </div>
+        <div class="hero-waves">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path class="wave wave1" d="M0,60 C360,120 1080,0 1440,60 L1440,120 L0,120 Z"/>
+                <path class="wave wave2" d="M0,80 C360,20 1080,100 1440,40 L1440,120 L0,120 Z"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <i class="fa-solid fa-circle-info section-icon"></i>
+                <h2 class="section-title">About the Project</h2>
+                <p class="section-subtitle">Critical infrastructure for resilient cities</p>
+            </div>
+            <p class="about-text" data-aos="fade-up" data-aos-delay="100">
+                The <strong>Disaster-Ready Water Storage System</strong> is a multidisciplinary project focused on developing
+                resilient water storage solutions for urban contexts in natural disaster or emergency situations.
+                We combine electronic engineering, software, geographic analysis, and resource management to create an
+                integrated, monitored, and scalable system.
+            </p>
+            <div class="metrics-grid" data-aos="fade-up" data-aos-delay="200">
+                <div class="metric-card">
+                    <span class="metric-value" data-target="6">0</span>
+                    <span class="metric-label">Departments</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-value" data-target="2">0</span>
+                    <span class="metric-label">Implementation Scenarios</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-value" data-target="72">0</span>
+                    <span class="metric-suffix">h</span>
+                    <span class="metric-label">System Autonomy</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROBLEM ===== -->
+    <section class="section section-alt" id="problem">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <i class="fa-solid fa-triangle-exclamation section-icon accent-red"></i>
+                <h2 class="section-title">The Problem</h2>
+                <p class="section-subtitle">Why cities are vulnerable</p>
+            </div>
+            <div class="two-col">
+                <div class="problem-list" data-aos="fade-right">
+                    <div class="problem-item">
+                        <i class="fa-solid fa-gun"></i>
+                        <div>
+                            <h3>Growing War Risk</h3>
+                            <p>Armed conflicts target water infrastructure as strategic objectives, compromising urban supply.</p>
+                        </div>
+                    </div>
+                    <div class="problem-item">
+                        <i class="fa-solid fa-house-crack"></i>
+                        <div>
+                            <h3>Imminent Seismic Activity</h3>
+                            <p>Earthquakes damage distribution networks and reservoirs, suddenly disrupting access to drinking water.</p>
+                        </div>
+                    </div>
+                    <div class="problem-item">
+                        <i class="fa-solid fa-sun"></i>
+                        <div>
+                            <h3>Climate Change Droughts</h3>
+                            <p>Increasingly frequent drought episodes reduce water availability and overload supply systems.</p>
+                        </div>
+                    </div>
+                    <div class="problem-item">
+                        <i class="fa-solid fa-ban"></i>
+                        <div>
+                            <h3>Compromise of Main Reservoirs</h3>
+                            <p>Failures in central reservoirs leave entire cities without supply alternatives in emergency situations.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="problem-visual" data-aos="fade-left">
+                    <div class="problem-card-big">
+                        <i class="fa-solid fa-droplet"></i>
+                        <h3>The Core Problem</h3>
+                        <p>In an <strong>emergency</strong> situation, access to drinking water in the first <strong>72h is crucial</strong> for population survival and the functioning of essential services.</p>
+                        <div class="impact-bar">
+                            <span>Public Health Impact</span>
+                            <div class="bar"><div class="bar-fill" style="--pct: 92%"></div></div>
+                        </div>
+                        <div class="impact-bar">
+                            <span>Emergency Services</span>
+                            <div class="bar"><div class="bar-fill" style="--pct: 78%"></div></div>
+                        </div>
+                        <div class="impact-bar">
+                            <span>Critical Infrastructure</span>
+                            <div class="bar"><div class="bar-fill" style="--pct: 85%"></div></div>
+                        </div>
+                    </div>
+                    <div class="problem-item" data-aos="fade-left" data-aos-delay="100">
+                        <i class="fa-solid fa-biohazard"></i>
+                        <div>
+                            <h3>Pathogenic Contamination</h3>
+                            <p>High biological risk contaminations compromise drinking water safety and represent a serious threat to public health.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SOLUTION ===== -->
+    <section class="section" id="solution">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <i class="fa-solid fa-lightbulb section-icon"></i>
+                <h2 class="section-title">The Solution</h2>
+                <p class="section-subtitle">Integrated, intelligent, and resilient system</p>
+            </div>
+            <div class="solution-diagram" data-aos="fade-up" data-aos-delay="100">
+                <div class="diagram-node node-sensor">
+                    <i class="fa-solid fa-microchip"></i>
+                    <span>IoT Sensors</span>
+                </div>
+                <div class="diagram-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                <div class="diagram-node node-main">
+                    <i class="fa-solid fa-server"></i>
+                    <span>Control Center</span>
+                </div>
+                <div class="diagram-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                <div class="diagram-node node-storage">
+                    <i class="fa-solid fa-droplet"></i>
+                    <span>Reservoirs</span>
+                </div>
+                <div class="diagram-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                <div class="diagram-node node-city">
+                    <i class="fa-solid fa-building"></i>
+                    <span>Distribution</span>
+                </div>
+            </div>
+            <div class="solution-cards" data-aos="fade-up" data-aos-delay="200">
+                <div class="sol-card">
+                    <i class="fa-solid fa-cubes"></i>
+                    <h3>Modular and Automated System</h3>
+                    <p>Point-to-point drinking water storage and distribution in urban environments, with <strong>independent and scalable</strong> modules.</p>
+                </div>
+                <div class="sol-card">
+                    <i class="fa-solid fa-globe"></i>
+                    <h3>Monitoring Web Portal</h3>
+                    <p>Permanently monitored through a <strong>web portal</strong>, with a permissions system and variable access depending on the user.</p>
+                </div>
+                <div class="sol-card">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <h3>Disaster Activation</h3>
+                    <p>Can be activated as an <strong>exceptional measure</strong> or as <strong>general</strong> access in disaster situations.</p>
+                </div>
+                <div class="sol-card">
+                    <i class="fa-solid fa-people-group"></i>
+                    <h3>Public and Institutional Access</h3>
+                    <p>Can be used by <strong>individuals</strong> or by <strong>institutions</strong> providing public support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== DEPARTMENTS ===== -->
+    <section class="section section-alt" id="departments">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <i class="fa-solid fa-sitemap section-icon"></i>
+                <h2 class="section-title">Departments</h2>
+                <p class="section-subtitle">Project work areas</p>
+            </div>
+
+            <!-- View tabs -->
+            <div class="dept-tabs" id="deptTabs" data-aos="fade-up" data-aos-delay="50">
+                <button class="dept-tab active" data-view="dept">
+                    <i class="fa-solid fa-sitemap"></i> By Department
+                </button>
+                <button class="dept-tab" data-view="person">
+                    <i class="fa-solid fa-users"></i> By Person
+                </button>
+            </div>
+
+            <!-- View: By Department -->
+            <div id="deptView">
+                <div class="dept-filter" id="deptFilter" data-aos="fade-up" data-aos-delay="100">
+                    <button class="btn-filter active" data-filter="all">All</button>
+                    <button class="btn-filter" data-filter="tecnico">Technical</button>
+                    <button class="btn-filter" data-filter="gestao">Management</button>
+                </div>
+                <div class="dept-grid" id="deptGrid">
+                    <!-- cards inserted by script.js -->
+                </div>
+            </div>
+
+            <!-- View: By Person -->
+            <div id="personView" style="display:none">
+                <div class="team-grid" id="personGridDept" data-aos="fade-up" data-aos-delay="100">
+                    <!-- cards generated by script.js -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== IMPLEMENTATION PHASES ===== -->
+    <section class="section" id="phases">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <i class="fa-solid fa-list-check section-icon"></i>
+                <h2 class="section-title">Implementation Phases</h2>
+                <p class="section-subtitle">System behavior in two scenarios</p>
+            </div>
+            <div class="phases-grid">
+                <div class="phase-col normalidade" data-aos="fade-right" data-aos-delay="100">
+                    <div class="phase-col-header">
+                        <i class="fa-solid fa-sun"></i>
+                        <h3>Normal Operation</h3>
+                    </div>
+                    <ol class="phase-list">
+                        <li>Strategic installation of modules</li>
+                        <li>Integration into the municipal water network</li>
+                        <li>
+                            Monitor:
+                            <ul class="phase-sublist">
+                                <li>Water level</li>
+                                <li>Water quality</li>
+                            </ul>
+                        </li>
+                        <li>Define maintenance protocols</li>
+                        <li>Inter-module communication and with <em>database</em> under normal conditions</li>
+                        <li>Real-time website for normal conditions</li>
+                    </ol>
+                </div>
+                <div class="phase-col catastrofe" data-aos="fade-left" data-aos-delay="100">
+                    <div class="phase-col-header">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        <h3>Disaster</h3>
+                    </div>
+                    <ol class="phase-list">
+                        <li>Immediate availability in critical time</li>
+                        <li>Monitor water level</li>
+                        <li>Control access and limits</li>
+                        <li>Ensure system resilience, even in case of power and telecommunications failure</li>
+                        <li>Modularity and transport to most affected areas</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ROADMAP ===== -->
+    <section class="section section-alt" id="roadmap">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <i class="fa-solid fa-calendar-days section-icon"></i>
+                <h2 class="section-title">Roadmap</h2>
+                <p class="section-subtitle">Project execution schedule</p>
+            </div>
+            <div class="roadmap-segs">
+
+                <div class="roadmap-seg">
+                    <div class="roadmap-popup">
+                        <div class="rm-popup-header"><span class="rm-step">01</span>25 Feb – 3 Mar</div>
+                        <ul class="roadmap-tasks">
+                            <li>Launch of team website and blog – <strong>Software</strong></li>
+                            <li>Revised project proposal</li>
+                            <li>Interview planning – <strong>External Relations</strong></li>
+                        </ul>
+                    </div>
+                    <span class="rm-seg-label">25 Feb</span>
+                </div>
+
+                <div class="roadmap-seg">
+                    <div class="roadmap-popup">
+                        <div class="rm-popup-header"><span class="rm-step">02</span>3 Mar – 17 Mar</div>
+                        <ul class="roadmap-tasks">
+                            <li>Solution requirements list
+                                <ul class="roadmap-subtasks">
+                                    <li>Functional Requirements</li>
+                                    <li>Non-Functional Requirements</li>
+                                    <li>Business Requirements and Constraints – <strong>Budget</strong></li>
+                                    <li>Technical Requirements – <strong>Electronics</strong></li>
+                                    <li>User Requirements – <strong>External Relations</strong></li>
+                                    <li>Regulatory and Environmental Requirements – <strong>Geographic</strong></li>
+                                    <li>Maintenance Requirements</li>
+                                    <li>Assumptions &amp; Dependencies</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <span class="rm-seg-label">3 Mar</span>
+                </div>
+
+                <div class="roadmap-seg">
+                    <div class="roadmap-popup">
+                        <div class="rm-popup-header"><span class="rm-step">03</span>17 Mar – 24 Mar</div>
+                        <ul class="roadmap-tasks">
+                            <li>Bill of Materials for the prototype – <strong>Electronics</strong></li>
+                            <li>Cost Management – <strong>Budget</strong></li>
+                            <li>Research by the <strong>Geography and Statistics</strong> team</li>
+                        </ul>
+                    </div>
+                    <span class="rm-seg-label">17 Mar</span>
+                </div>
+
+                <div class="roadmap-seg">
+                    <div class="roadmap-popup">
+                        <div class="rm-popup-header"><span class="rm-step">04</span>24 Mar – 31 Mar</div>
+                        <ul class="roadmap-tasks">
+                            <li>Draft interim presentation</li>
+                        </ul>
+                    </div>
+                    <span class="rm-seg-label">24 Mar</span>
+                </div>
+
+                <div class="roadmap-seg">
+                    <div class="roadmap-popup">
+                        <div class="rm-popup-header"><span class="rm-step">05</span>31 Mar – 07 Apr</div>
+                        <ul class="roadmap-tasks">
+                            <li>Final interim presentation</li>
+                            <li>Obtain materials for prototype construction</li>
+                        </ul>
+                    </div>
+                    <span class="rm-seg-label">31 Mar</span>
+                </div>
+
+                <div class="roadmap-seg">
+                    <div class="roadmap-popup">
+                        <div class="rm-popup-header"><span class="rm-step">06</span>07 Apr – 19 May</div>
+                        <ul class="roadmap-tasks">
+                            <li>Development of the first prototype version:
+                                <ul class="roadmap-subtasks">
+                                    <li>Demo version of the monitoring portal – <strong>Software</strong></li>
+                                    <li>Demo version of the storage module – <strong>Firmware</strong></li>
+                                    <li>Demo version of access monitoring – <strong>Firmware/Software</strong></li>
+                                    <li>Prototype use under exception and normal conditions</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <span class="rm-seg-label">07 Apr</span>
+                </div>
+
+                <div class="roadmap-seg">
+                    <div class="roadmap-popup">
+                        <div class="rm-popup-header"><span class="rm-step">07</span>19 May – 26 May</div>
+                        <ul class="roadmap-tasks">
+                            <li>Prototype completion – <strong>Firmware/Software</strong></li>
+                        </ul>
+                    </div>
+                    <span class="rm-seg-label">19 May</span>
+                </div>
+
+                <div class="roadmap-seg">
+                    <div class="roadmap-popup">
+                        <div class="rm-popup-header"><span class="rm-step">08</span>26 May – 2 Jun</div>
+                        <ul class="roadmap-tasks">
+                            <li>Finalize team website and blog portal – <strong>Software</strong></li>
+                            <li>Present the operational monitoring portal with the prototype module network – <strong>Firmware/Software</strong></li>
+                            <li>Demonstration video of the project's operation through the prototype</li>
+                            <li>Pitch Deck</li>
+                            <li>ElectroCap ElectroDay Poster</li>
+                        </ul>
+                    </div>
+                    <span class="rm-seg-label">26 May</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">
+                <i class="fa-solid fa-droplet"></i>
+                <span>Disaster-Ready Water Storage System</span>
+            </div>
+            <p class="footer-sub">Integrative Course Project — Instituto Superior Técnico · 2025/2026</p>
+            <p class="footer-copy">Developed with purpose. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <!-- Main JS -->
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -118,43 +118,43 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // ---- 8. Team + Departments data & generation ----
 
 const teamDataMain = [
-    { name: 'Carolina João',      role: 'leader', dept: 'Eletrónica',           deptIcon: 'fa-microchip', photo: 'photos/Carolina.png'  },
-    { name: 'Tomás Ribeiro',      role: 'leader', dept: 'Firmware',             deptIcon: 'fa-bolt',      photo: 'photos/Tomás.jpg'     },
-    { name: 'Margarida Sebastião',role: 'leader', dept: 'Geográfica / Métricas',deptIcon: 'fa-map',       photo: 'photos/Margarida.png' },
-    { name: 'Matilde Silva',      role: 'leader', dept: 'Orçamento',            deptIcon: 'fa-coins',     photo: 'photos/Matilde.png'   },
-    { name: 'Francisco Caravana', role: 'leader', dept: 'Relações Externas',    deptIcon: 'fa-handshake', photo: 'photos/Francisco.jpg' },
-    { name: 'Tiago Carvalho',     role: 'leader', dept: 'Software',             deptIcon: 'fa-code',      photo: 'photos/tiago.png'     },
+    { name: 'Carolina João',      role: 'leader', dept: 'Electronics',          deptIcon: 'fa-microchip', photo: 'photos/Carolina.png'  },
+    { name: 'Tomás Ribeiro',      role: 'leader', dept: 'Software',             deptIcon: 'fa-code',      photo: 'photos/Tomás.jpg'     },
+    { name: 'Margarida Sebastião',role: 'leader', dept: 'Geographic / Metrics', deptIcon: 'fa-map',       photo: 'photos/Margarida.png' },
+    { name: 'Matilde Silva',      role: 'leader', dept: 'Budget',               deptIcon: 'fa-coins',     photo: 'photos/Matilde.png'   },
+    { name: 'Francisco Caravana', role: 'leader', dept: 'External Relations',   deptIcon: 'fa-handshake', photo: 'photos/Francisco.jpg' },
+    { name: 'Tiago Carvalho',     role: 'leader', dept: 'Software',             deptIcon: 'fa-code',      photo: 'photos/Tsiago.png'     },
 ];
 
 const deptData = [
     {
-        icon: 'fa-microchip', name: 'Eletrónica', category: 'tecnico',
-        desc: 'Design e prototipagem de hardware, sensores de nível e qualidade de água, sistemas de atuação e interfaces físicas.',
+        icon: 'fa-microchip', name: 'Electronics', category: 'tecnico',
+        desc: 'Hardware design and prototyping, water level and quality sensors, actuation systems, and physical interfaces.',
         leader: 'Carolina João', members: ['Tiago Carvalho', 'Francisco Caravana', 'Tomás Ribeiro']
     },
     {
-        icon: 'fa-coins', name: 'Orçamento', category: 'gestao',
-        desc: 'Estimativa de custos de implementação, análise custo-benefício, sourcing de componentes e viabilidade financeira do projeto.',
+        icon: 'fa-coins', name: 'Budget', category: 'gestao',
+        desc: 'Implementation cost estimation, cost-benefit analysis, component sourcing, and financial viability of the project.',
         leader: 'Matilde Silva', members: ['Tiago Carvalho']
     },
     {
-        icon: 'fa-map', name: 'Geográfica / Métricas', category: 'tecnico',
-        desc: 'Análise GIS para seleção de localizações, modelação de redes de distribuição e definição de métricas de desempenho.',
+        icon: 'fa-map', name: 'Geographic / Metrics', category: 'tecnico',
+        desc: 'GIS analysis for location selection, distribution network modelling, and performance metrics definition.',
         leader: 'Margarida Sebastião', members: ['Matilde Silva', 'Tomás Ribeiro']
     },
     {
-        icon: 'fa-handshake', name: 'Relações Externas', category: 'gestao',
-        desc: 'Ligação com municípios, entidades reguladoras e parceiros institucionais. Gestão de comunicação e divulgação do projeto.',
+        icon: 'fa-handshake', name: 'External Relations', category: 'gestao',
+        desc: 'Liaison with municipalities, regulatory bodies, and institutional partners. Communication management and project outreach.',
         leader: 'Francisco Caravana', members: ['Margarida Sebastião']
     },
     {
         icon: 'fa-bolt', name: 'Firmware', category: 'tecnico',
-        desc: 'Desenvolvimento do firmware embebido, protocolos de comunicação e integração com hardware de sensores e atuadores.',
+        desc: 'Embedded firmware development, communication protocols, and integration with sensor and actuator hardware.',
         leader: 'Matilde Silva', members: ['Margarida Sebastião', 'Carolina João']
     },
     {
         icon: 'fa-code', name: 'Software', category: 'tecnico',
-        desc: 'Dashboard de monitorização, APIs de integração, interfaces web e lógica de controlo do sistema.',
+        desc: 'Monitoring dashboard, integration APIs, web interfaces, and system control logic.',
         leader: 'Tomás Ribeiro', members: ['Tiago Carvalho', 'Francisco Caravana']
     },
 ];
@@ -182,7 +182,7 @@ function buildPersonCard(member) {
     return card;
 }
 
-// Generate #deptGrid (Por Departamento — with leader/members listed)
+// Generate #deptGrid (By Department — with leader/members listed)
 const deptGrid = document.getElementById('deptGrid');
 const filterBtns = document.querySelectorAll('.btn-filter');
 
@@ -221,7 +221,7 @@ if (deptGrid) {
     });
 }
 
-// Generate #personGridDept (Por Pessoa)
+// Generate #personGridDept (By Person)
 const personGridDept = document.getElementById('personGridDept');
 if (personGridDept) {
     teamDataMain.forEach(member => personGridDept.appendChild(buildPersonCard(member)));
@@ -261,3 +261,17 @@ const sectionObserver = new IntersectionObserver((entries) => {
 }, { rootMargin: '-40% 0px -55% 0px' });
 
 sections.forEach(s => sectionObserver.observe(s));
+
+// ---- 10. Roadmap popup — touch/click for mobile ----
+document.querySelectorAll('.roadmap-seg').forEach(seg => {
+    seg.addEventListener('click', (e) => {
+        const isActive = seg.classList.contains('active');
+        document.querySelectorAll('.roadmap-seg').forEach(s => s.classList.remove('active'));
+        if (!isActive) seg.classList.add('active');
+        e.stopPropagation();
+    });
+});
+
+document.addEventListener('click', () => {
+    document.querySelectorAll('.roadmap-seg').forEach(s => s.classList.remove('active'));
+});
